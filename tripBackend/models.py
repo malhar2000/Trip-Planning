@@ -10,6 +10,9 @@ class Trip(models.Model):
     trip_end_station_name = models.CharField(max_length=100)
     trip_title = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.trip_title
+
 class TripDetails(models.Model):
     trip_id = models.ForeignKey(Trip, on_delete=models.CASCADE)
     trip_details_id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
@@ -17,5 +20,6 @@ class TripDetails(models.Model):
     trip_details_location_to_visit = models.CharField(max_length=100)
     trip_location_budget = models.IntegerField()
     trip_members = models.IntegerField()
+   
     
      

@@ -36,6 +36,7 @@ class TripDetailsList(generics.ListCreateAPIView,  generics.UpdateAPIView):
         return Response(serializer.data, 200)
 
     def post(self, request, *args, **kwargs):
+        print(request.data)
         return self.create(request, *args, **kwargs)
 
     def put(self, request, *args, **kwargs):

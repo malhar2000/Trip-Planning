@@ -8,6 +8,7 @@ class TripSerializer(serializers.ModelSerializer):
         fields = ('trip_id', 'trip_start_time', 'trip_end_time', 'trip_start_station_name', 'trip_end_station_name', 'trip_title')
        
 class TripDetailsSerializer(serializers.ModelSerializer):
+    trip_id =  TripSerializer(read_only=True)
     class Meta:
         model = TripDetails
         fields = ('trip_id', 'trip_details_id', 'trip_details_time', 'trip_details_location_to_visit', 'trip_location_budget', 'trip_members')

@@ -21,6 +21,10 @@ export default function App() {
 				<Stack.Screen
 					name="Trip Details"
 					component={TripDetails}
+					// options={{
+					// 	headerTitle: ({ route }) => <Text>{route.params.title}</Text>,
+					// 	headerRight: () => <Text>EDIT</Text>,
+					// }}
 					options={({ route }) => ({ title: route.params.title })}
 				/>
 			</Stack.Navigator>

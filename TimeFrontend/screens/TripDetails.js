@@ -36,7 +36,7 @@ const TripDetails = ({props, navigation, route}) => {
     .then(res => {
       setDetailsData(res.data);
     })
-  }, [])
+  }, [modelView])
 
   const onPressHandler = () => {
     setModalView(prevState => !prevState);

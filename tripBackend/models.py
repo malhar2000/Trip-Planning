@@ -4,8 +4,8 @@ from uuid import uuid4
 # Create your models here.
 class Trip(models.Model):
     trip_id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    trip_start_time = models.DateTimeField()
-    trip_end_time = models.DateTimeField()
+    trip_start_time = models.DateTimeField(auto_now=True, blank=True)
+    trip_end_time = models.DateTimeField(auto_now=True, blank=True)
     trip_start_station_name = models.CharField(max_length=100)
     trip_end_station_name = models.CharField(max_length=100)
     trip_title = models.CharField(max_length=100)

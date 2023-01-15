@@ -3,15 +3,15 @@ import React from 'react'
 
 const TripDetailView = (props) => {
   return (
+    <View className="p-3"> 
     <View> 
-    <View> 
-        <Text>{props["trip_id"]["trip_title"]}</Text>
-        <Text>{props["trip_id"]["trip_end_station_name"]}</Text>
-        <Text>{props["tripLocation"]}</Text>
+        <Text className="p-3">{props["trip_id"]["trip_title"]}</Text>
+        <Text className="p-3">{props["trip_id"]["trip_end_station_name"]}</Text>
+        <Text className="p-3">{props["tripLocation"]}</Text>
     </View>
     <View>
-        <Text>{props["tripBudget"]}</Text>
-        <Text>{props["tripMembers"]}</Text>
+        <Text className="p-3">{props["tripBudget"]}</Text>
+        <Text className="p-3">{props["tripMembers"]}</Text>
    </View>
    </View>
   )

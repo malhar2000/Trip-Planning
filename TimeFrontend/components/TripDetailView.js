@@ -1,20 +1,17 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const TripDetailView = () => {
+const TripDetailView = (props) => {
   return (
     <View> 
     <View> 
-        <Text>Trip Title</Text>
-        <Text>Trip destination</Text>
+        <Text>{props["trip_id"]["trip_title"]}</Text>
+        <Text>{props["trip_id"]["trip_end_station_name"]}</Text>
+        <Text>{props["tripLocation"]}</Text>
     </View>
     <View>
-        <Text>Trip starttime</Text>
-        <Text>Trip endtime</Text>
-    </View>
-    <View>
-        <Text>Trip budget</Text>
-        <Text>Trip members</Text>
+        <Text>{props["tripBudget"]}</Text>
+        <Text>{props["tripMembers"]}</Text>
    </View>
    </View>
   )

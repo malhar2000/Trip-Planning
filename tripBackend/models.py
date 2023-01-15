@@ -16,7 +16,7 @@ class Trip(models.Model):
 class TripDetails(models.Model):
     trip_id = models.ForeignKey(Trip, on_delete=models.CASCADE)
     trip_details_id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    trip_details_time = models.DateTimeField()
+    trip_details_time = models.DateTimeField(auto_now=True, blank=True)
     trip_details_location_to_visit = models.CharField(max_length=100)
     trip_location_budget = models.IntegerField()
     trip_members = models.IntegerField()
